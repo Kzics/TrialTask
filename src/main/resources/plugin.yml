@@ -1,0 +1,6 @@
+main: com.trialtask.Main
+version: 1.0.0
+name: TrialTask
+commands:
+  potion:
+    description: Gives the player a potion
