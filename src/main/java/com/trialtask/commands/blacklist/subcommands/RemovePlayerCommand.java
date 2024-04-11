@@ -38,6 +38,12 @@ public class RemovePlayerCommand implements ICommand {
             sender.sendMessage("Player not found");
             return;
         }
+
+        if(!blacklistManager.isBlacklisted(target.getUniqueId())){
+            sender.sendMessage("Player is not blacklisted");
+            return;
+        }
+
         blacklistManager.removePlayer(target.getUniqueId());
         sender.sendMessage("Player removed from blacklist");
 
